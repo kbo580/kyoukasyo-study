@@ -60,6 +60,45 @@ body{
   }
 }
 
+.cardWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  // border: 1px solid #000;
+  margin: 20px;
+  gap: 20px;
+}
+
+.ex-card{
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.h2-heading{
+  border-bottom: 3px solid #fc2;
+  padding-bottom: 8px;
+
+}
+
+.p-text{
+padding-top: 20px;
+}
+
+@media (min-width: 768px){
+  .cardWrapper{
+    flex-direction: row;
+  }
+
+  .ex-card{
+    width: calc((100% - 20px) / 2);
+  }
+
+
+}
+
 // .btn{
 //   max-width: 300px;
 //   width: 80%;
