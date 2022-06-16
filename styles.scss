@@ -60,44 +60,133 @@ body{
   }
 }
 
-.cardWrapper{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  // border: 1px solid #000;
-  margin: 20px;
-  gap: 20px;
-}
+.column{
 
-.ex-card{
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 4px;
-  width: 100%;
-}
-
-.h2-heading{
-  border-bottom: 3px solid #fc2;
-  padding-bottom: 8px;
-
-}
-
-.p-text{
-padding-top: 20px;
-}
-
-@media (min-width: 768px){
-  .cardWrapper{
-    flex-direction: row;
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 20px;
   }
 
-  .ex-card{
+  &__wrapper--4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 20px;
+  }
+
+  &__card{
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  &__heading{
+    border-bottom: 3px solid #fc2;
+    padding-bottom: 8px;
+  }
+
+  &__text{
+  padding-top: 20px;
+  }
+}
+
+.column__wrapper--grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+
+@media (min-width: 768px){
+  .column{
+
+    &__wrapper{
+      // flex-direction: row;
+    }
+    &__wrapper--4{
+      // flex-direction: row;
+    }
+  }
+
+  .col--2{
     width: calc((100% - 20px) / 2);
   }
 
+  .col--3{
+    width: calc((100% - 20px) / 2);
+  }
+
+  .col--4{
+    width: calc((100% - 20px) / 2);
+  }
 
 }
+
+@media (min-width: 992px){
+  .column__wrapper::after{
+    // content: "";
+    // display: block;
+    // width: calc((100% - 40px) / 3);
+  }
+
+  .column__wrapper--4::after,
+  .column__wrapper--4::before{
+    // content: "";
+    // display: block;
+    // width: calc((100% - 60px) / 4);
+    // border: 1px solid #000;
+  }
+
+  .column__wrapper--4::before{
+    // order: 1;
+    // border: 1px solid #000;
+  }
+
+  .col--3{
+    // width: calc((100% - 40px) / 3);
+  }
+
+  .col--4{
+    // width: calc((100% - 60px) / 4);
+  }
+}
+
+.main-container{
+  display: grid;
+  grid-template: 
+  "h h h" 80px
+  "ad ar as" 500px
+  "f f f" 120px
+  /100px 1fr 300px;
+}
+
+header, .ad,article,aside,footer{
+  border: 1px solid #ccc;
+}
+
+header{
+  grid-area: h;
+}
+.ad{
+  grid-area: ad;
+}
+article{
+  grid-area: ar;
+}
+aside{
+  grid-area: as;
+}
+footer{
+  grid-area: f;
+}
+
+
 
 // .btn{
 //   max-width: 300px;
