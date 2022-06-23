@@ -700,6 +700,43 @@ footer{
   }
 }
 
+
+.inner{
+  padding: 0px 20px;
+  max-width: 1020px;
+  margin: 0px auto;
+
+}
+
+.bg{
+  &__container{
+    // border: 1px solid red;
+    margin-top: 40px;
+
+    &.__bg{
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding-left: calc(50vw - 50%);
+      padding-right: calc(50vw - 50%);
+      background-color: #cdecf0;
+    }
+  }
+
+
+
+  &__title{
+  
+  }
+
+  &__text{
+  padding-top: 20px;
+  }
+
+}
+
+
+
+
 .list--pc-3col{
 
   &__item{
@@ -759,28 +796,6 @@ footer{
   max-width: 1000px;
   margin: 0 auto;
   outline: 1px dashed red;
-}
-
-.bg{
-  padding: 50px 0;
-
-  &.bg--bg{
-    background-color: #cdecf0;
-    margin-left: calc(50% - 50vw);
-    // margin-right: calc(50% - 50vw);
-    // padding-left: calc(50vw - 50%);
-    // padding-right: calc(50vw - 50%);
-    overflow-x: hidden;
-  }
-
-  &__title{
-    font-weight: bold;
-    font-size: 24px;
-  }
-
-  &__text{
-    padding-top: 20px;
-  }
 }
 
 .card{
@@ -916,12 +931,12 @@ footer{
   display: flex;
   flex-direction: column-reverse;
   color: #fff;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 
   &__body{
     background-color: #0027ff;
     letter-spacing: 0.2em;
-    width: 90%;
+    // width: 90%;
     margin: -60px 15px 0 0;
     padding: 30px 35px;
   }
@@ -940,6 +955,11 @@ footer{
   
   &__text{
   }
+  &__image{
+img{
+  width: 100%;
+}
+  }
 }
 
 
@@ -949,7 +969,7 @@ footer{
     &__body{
       width: 67%;
       margin: -114px 0 0;
-      padding-right: 20px;
+  //     padding-right: 20px;
     }
   
     &__title{
@@ -961,7 +981,7 @@ footer{
 
     &__image{
       margin-left: 35px;
-      margin-left: calc(125 / 1600 *100vw);
+  //     margin-left: calc(125 / 1600 *100vw);
     }
   }
 }
